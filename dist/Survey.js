@@ -42,7 +42,7 @@ class Survey extends React.Component {
         const { isComplete, isPreview, nextPageIndex, nextPage, completeText } = this.props;
         if (isComplete) {
             return (<View style={styles.results}>
-          <Text>{completeText ? completeText : "Thanks for Apply!"} </Text>
+          <Text>{completeText ? completeText : 'Thanks for Apply!'} </Text>
         </View>);
         }
         return (<SafeAreaView style={styles.container}>
@@ -61,5 +61,5 @@ export default inject((store) => ({
     isPreview: store.model.isPreview,
     nextPage: store.model.nextPage,
     nextPageIndex: store.model.nextPageIndex,
-    completeText: store.model.completeText
+    completeText: store.model.completeText,
 }))(observer(Survey));

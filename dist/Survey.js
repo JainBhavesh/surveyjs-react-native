@@ -39,10 +39,10 @@ const styles = StyleSheet.create({
 });
 class Survey extends React.Component {
     render() {
-        const { isComplete, isPreview, nextPageIndex, nextPage } = this.props;
+        const { isComplete, isPreview, nextPageIndex, nextPage, completeText } = this.props;
         if (isComplete) {
             return (<View style={styles.results}>
-          <Text>Thank you for completing the survey!</Text>
+          <Text>{completeText ? completeText : "Thank you for completing the survey!"} </Text>
         </View>);
         }
         return (<SafeAreaView style={styles.container}>
@@ -61,4 +61,5 @@ export default inject((store) => ({
     isPreview: store.model.isPreview,
     nextPage: store.model.nextPage,
     nextPageIndex: store.model.nextPageIndex,
+    completeText: store.model.completeText
 }))(observer(Survey));

@@ -4,6 +4,7 @@ export interface SurveyProps {
     isPreview?: boolean;
     nextPage?: any;
     nextPageIndex?: number;
+    completeText?: string;
 }
 declare class Survey extends React.Component<SurveyProps> {
     render(): JSX.Element;

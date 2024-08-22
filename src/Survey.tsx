@@ -80,4 +80,5 @@ export default inject((store: any) => ({
   isPreview: store.model.isPreview,
   nextPage: store.model.nextPage,
   nextPageIndex: store.model.nextPageIndex,
+  completeText: store.model.completeText
 }))(observer(Survey));

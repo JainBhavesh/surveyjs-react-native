@@ -44,17 +44,18 @@ export interface SurveyProps {
   isPreview?: boolean;
   nextPage?: any;
   nextPageIndex?: number;
-  completeText?:string
+  completeText?: string;
 }
 
 class Survey extends React.Component<SurveyProps> {
   render() {
-    const { isComplete, isPreview, nextPageIndex, nextPage, completeText } = this.props;
+    const { isComplete, isPreview, nextPageIndex, nextPage, completeText } =
+      this.props;
 
     if (isComplete) {
       return (
         <View style={styles.results}>
-          <Text>{completeText ? completeText : "Thank you for completing the survey!"} </Text>
+          <Text>{completeText ? completeText : 'Thanks for Apply!'} </Text>
         </View>
       );
     }
@@ -80,5 +81,5 @@ export default inject((store: any) => ({
   isPreview: store.model.isPreview,
   nextPage: store.model.nextPage,
   nextPageIndex: store.model.nextPageIndex,
-  completeText: store.model.completeText
+  completeText: store.model.completeText,
 }))(observer(Survey));

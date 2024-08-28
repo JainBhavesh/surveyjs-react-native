@@ -55,7 +55,9 @@ class Survey extends React.Component<SurveyProps> {
     if (isComplete) {
       return (
         <View style={styles.results}>
-          <Text>{completeText ? completeText : 'Thanks for Apply!'} </Text>
+          <Text>
+            {completeText ? completeText : 'Thanks for the Application.'}{' '}
+          </Text>
         </View>
       );
     }

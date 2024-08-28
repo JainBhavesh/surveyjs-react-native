@@ -42,7 +42,7 @@ class Survey extends React.Component {
         const { isComplete, isPreview, nextPageIndex, nextPage, completeText } = this.props;
         if (isComplete) {
             return (<View style={styles.results}>
-          <Text>{completeText ? completeText : 'Thanks for Apply!'} </Text>
+          <Text>{completeText ? completeText : 'Thanks for the Application.'} </Text>
         </View>);
         }
         return (<SafeAreaView style={styles.container}>

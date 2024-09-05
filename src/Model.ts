@@ -390,7 +390,7 @@ export default class Model {
   }
 
   onComplete = () => {
-    this.isComplete = true;
+    // this.isComplete = true;
     if (this.apis.onComplete) {
       this.apis.onComplete(this.results);
     }
